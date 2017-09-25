@@ -1,0 +1,21 @@
+{
+  "name": "grunt-getting-started",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-sass": "git+https://github.com/gruntjs/grunt-contrib-sass.git#e85ee70ccb8839867172b57ca1378293291f8037",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "*",
+    "jshint-stylish": "latest",
+    "load-grunt-tasks": "~3.5.0",
+    "time-grunt": "~1.3.0"
+  },
+  "dependencies": {
+    "compass": "^0.1.1",
+    "foundation-sites": "^6.4.3"
+  }
+}

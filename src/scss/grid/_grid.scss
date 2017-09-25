@@ -1,0 +1,11 @@
+.row {
+  max-width: $global-width;
+  margin-right: auto;
+  margin-left: auto;
+  @include respond-to('large') {
+    padding: 20px 75px 20px 75px;
+  }
+  @include respond-to('medium') {
+    padding: 20px 15px 20px 15px;
+  }
+}

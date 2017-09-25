@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'lato-black';
+  src: 	url('#{$font-dir}lato-black.woff2') format('woff2'),
+  		  url('#{$font-dir}lato-black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-light';
+  src: 	url('#{$font-dir}lato-light.woff2') format('woff2'),
+  		url('#{$font-dir}lato-light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: 	url('#{$font-dir}lato-regular.woff2') format('woff2'),
+  		url('#{$font-dir}lato-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$base-heading:'lato-black', Hellvetica, san-serif;
+$base-font:'lato-light', Hellvetica, san-serif;
+$font-regular:'lato-regular', Hellvetica, san-serif;
+
+h1 {
+  font-family:$base-heading;
+  font-size: 30px;
+  color: #2D2E30;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @include respond-to('small') {
+    font-size: 20px;
+  }
+}
+
+h2 {
+  font-family:$base-heading;
+  font-size: 30px;
+  color: #779199;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  line-height: 1.4;
+  @include respond-to('small') {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-family: $base-font;
+  font-size: 24px;
+  color: #000000;
+  letter-spacing: 0.5px;
+  padding: 0;
+  margin: 0px;
+  @include respond-to('medium') {
+    font-size: 20px;
+  }
+  @include respond-to('small') {
+    font-size: 15px;
+  }
+}
+small,
+.text-small {
+  font-size: 15px;
+}
+
+.text-large {
+  font-size: 30px;
+}
+
+@import 'alignment';

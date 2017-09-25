@@ -1,0 +1,74 @@
+/* Dir*/
+$font-dir: "../fonts/";
+$img-dir: "../img/";
+
+$global-width:960px;
+$global-line-height:1.4;
+
+/* Colors */
+$black:#000;
+$white:#fff;
+$red:#FD5454;
+$green:#7BDB4C;
+$gray:#8E8E8E;
+$dark-gray:#555D60;
+$medium-gray:#76797F;
+
+$transition:all 0.5s ease-in-out;
+
+/* Breakpoints */
+$breakpoints: (
+  'small':  500px,
+  'medium': 735px,
+  'large':  1024px
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/* Color classes */
+.color-white {color: $white; text-decoration: none;}
+.color-black {color: $black;}
+
+.color-red {color: $red;}
+.color-green {color: $green;}
+.color-white {color: $white;}
+.color-dark-gray {color: $dark-gray;}
+.color-medium-gray {color: $medium-gray;}
+
+/* Links color */
+//Links Mixin
+@mixin links ($link, $hover, $active) {
+    & {
+        color: $link;
+
+        &:hover {
+            color: $hover;
+        }
+        &:active, &:focus {
+            color: $active;
+        }
+    }
+}
+
+a {
+  transition:$transition !important;
+  @include links($gray, $red, $gray);
+}

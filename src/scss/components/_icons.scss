@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('#{$font-dir}icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-arrow_down:before {
+  content: "\e901";
+  color: #fff;
+}
+.icon-arrow_left:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-arrow_right:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-close:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-error:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-facebook:before {
+  content: "\e906";
+  color: #fff;
+}
+.icon-instagram:before {
+  content: "\e907";
+  color: #fff;
+}
+.icon-menu:before {
+  content: "\e908";
+  color: #fff;
+}
+.icon-mouse:before {
+  content: "\e909";
+  @include respond-to('large') {
+    content: "\e900";
+  }
+}
+.icon-twitter:before {
+  content: "\e90a";
+  color: #fff;
+}

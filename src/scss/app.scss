@@ -1,0 +1,43 @@
+@import 'vendor/normalize';
+@import 'global';
+
+@import 'typography/typography';
+
+
+/* Header */
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/icons';
+@import 'components/buttons';
+/* Components */
+@import 'grid/grid';
+@import 'components/slider';
+@import 'components/masonry_grid';
+
+body {
+  line-height: $global-line-height;
+  margin: 0px;
+  padding: 0px;
+}
+
+#instagram-container {
+  background-image: url('#{$img-dir}bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+
+#instagram-container h2 {
+  padding-top: 100px;
+    @include respond-to('large') {
+      padding-top: 80px;
+    }
+    @include respond-to('small') {
+      padding-top: 40px;
+    }
+}
+
+.spacenobottom {
+  padding-bottom: 0px;
+}
